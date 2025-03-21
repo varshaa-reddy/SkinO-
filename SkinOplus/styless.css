@@ -1,0 +1,199 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Navbar Styling */
+nav {
+    background-color: rgba(255, 255, 255, 0.517);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: rgb(196, 54, 78);
+    letter-spacing: 1px;
+}
+
+#plus {
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    font-size: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: rgb(196, 54, 78);
+}
+/* container*/
+.container{
+    margin-top:78px;
+}
+
+/* Full-Width Sections */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 0;
+    justify-content: center;
+}
+
+/* Alternating Layouts */
+.first, .second {
+    display: flex;
+    width: 100%;
+}
+
+/* Image on left for .first */
+.first .picture {
+    order: 1;
+}
+
+/* Image on right for .second */
+.second .picture {
+    order: 2;
+}
+
+/* Text Styling */
+.text {
+    width: 70%;
+    padding: 10px 20px;
+    padding-top:18px;
+    font-size: 15px;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+#heading{
+    color: rgb(196, 54, 78);
+}
+
+/* Image Styling */
+.picture {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture img {
+    width: 200px;
+    max-width: 50%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.picture img:hover {
+    transform: scale(1.05);
+}
+
+/* Background Colors */
+.first {
+    flex-direction: row;
+    background-color: #D2BBB7;
+    height:280px;
+    padding-left: 230px;
+    padding-right: 200px;
+    justify-content: center;
+    gap:20px;
+}
+.second {
+    flex-direction: row-reverse;
+    background-color: #e9dcd9;
+    height:280px;
+    padding-left: 200px;
+    padding-right: 230px;
+    justify-content: center;
+    gap:20px;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Footer Section */
+footer {
+    background-color: rgb(196, 54, 78);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text, .picture {
+        width: 100%;
+    }
+
+    .picture img {
+        width: 60%;
+    }
+
+    /* Mobile Navbar */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
